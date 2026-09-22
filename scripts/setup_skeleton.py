@@ -12,7 +12,6 @@ Module Attributes:
     REQUIRED_DIRS (list[str]): Core directories for the platform.
 """
 
-import os
 from pathlib import Path
 
 REQUIRED_DIRS = [
@@ -21,7 +20,7 @@ REQUIRED_DIRS = [
     "ingestion",
     "docs/adr",
     "src/foundation",
-    "tests/unit/foundation"
+    "tests/unit/foundation",
 ]
 
 ADR_001 = """# ADR 001: Data Engine Selection
@@ -51,18 +50,20 @@ We will use a monolithic repository with top-level capability folders (`infrastr
 Simplifies CI/CD and dependency management for V1 without the complexity of micro-repos.
 """
 
+
 def create_skeleton(base_path: Path) -> None:
     """Creates the standard directories and ADR files."""
     for directory in REQUIRED_DIRS:
         (base_path / directory).mkdir(parents=True, exist_ok=True)
-    
+
     # Write foundational ADRs
     adr_path = base_path / "docs" / "adr"
     (adr_path / "001-data-engine.md").write_text(ADR_001)
     (adr_path / "002-transformation-tooling.md").write_text(ADR_002)
     (adr_path / "003-repo-structure.md").write_text(ADR_003)
-    
+
     print("AERIS skeleton initialized successfully.")
+
 
 if __name__ == "__main__":
     create_skeleton(Path.cwd())

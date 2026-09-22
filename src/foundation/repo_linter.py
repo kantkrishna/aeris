@@ -2,7 +2,7 @@
 """
 Repository Structure Validation Utilities.
 
-This module provides tools to validate the foundational structure of the 
+This module provides tools to validate the foundational structure of the
 AERIS codebase. It checks for the presence of required architectural directories
 and enforces a standard template for Architecture Decision Records (ADRs).
 
@@ -19,10 +19,11 @@ from pathlib import Path
 from typing import List
 
 REQUIRED_ADR_SECTIONS: List[str] = [
-    r"^#\s+ADR",        # Must start with a Level 1 Header containing "ADR"
-    r"^##\s+Context",   # Must contain a Level 2 Header "Context"
-    r"^##\s+Decision"   # Must contain a Level 2 Header "Decision"
+    r"^#\s+ADR",  # Must start with a Level 1 Header containing "ADR"
+    r"^##\s+Context",  # Must contain a Level 2 Header "Context"
+    r"^##\s+Decision",  # Must contain a Level 2 Header "Decision"
 ]
+
 
 def get_missing_directories(base_path: Path, required_dirs: List[str]) -> List[str]:
     """
@@ -41,6 +42,7 @@ def get_missing_directories(base_path: Path, required_dirs: List[str]) -> List[s
         if not target_path.is_dir():
             missing_dirs.append(dir_path)
     return missing_dirs
+
 
 def validate_adr_format(content: str) -> bool:
     """
