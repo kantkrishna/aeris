@@ -217,3 +217,7 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 demo_output/
+
+# Repomix
+repomix.lock
+.repomixignore

@@ -8,7 +8,7 @@ Work iteratively: **explore → implement → execute → inject failure → dia
 
 # Epics
 
-## E1 — Reliable Data Processing
+## Epic 7 — Reliable Data Processing
 
 **Deliverables**
 
@@ -19,7 +19,7 @@ Work iteratively: **explore → implement → execute → inject failure → dia
 
 **Expected outcome:** Pipelines can recover from realistic operational failures without corrupting data.
 
-## E2 — SRE & Observability
+## Epic 8 — SRE & Observability
 
 **Deliverables**
 
@@ -30,7 +30,7 @@ Work iteratively: **explore → implement → execute → inject failure → dia
 
 **Expected outcome:** AERIS can be operated as a production platform rather than simply executed as a pipeline.
 
-## E3 — DevSecOps
+## Epic 9 — DevSecOps
 
 **Deliverables**
 
@@ -41,7 +41,7 @@ Work iteratively: **explore → implement → execute → inject failure → dia
 
 **Expected outcome:** Platform changes follow a repeatable engineering delivery process.
 
-## E4 — Security & Governance
+## Epic 10 — Security & Governance
 
 **Deliverables**
 
@@ -52,7 +52,7 @@ Work iteratively: **explore → implement → execute → inject failure → dia
 
 **Expected outcome:** Security and governance become enforceable platform capabilities.
 
-## E5 — FinOps
+## Epic 11 — FinOps
 
 **Deliverables**
 
@@ -63,7 +63,7 @@ Work iteratively: **explore → implement → execute → inject failure → dia
 
 **Expected outcome:** Engineering decisions can be evaluated in terms of reliability, performance and cost.
 
-## E6 — Engineering Operating Model
+## Epic 12 — Engineering Operating Model
 
 **Deliverables**
 
