@@ -6,7 +6,7 @@ The objective is not to duplicate the same workload on two platforms. Demonstrat
 
 # Epics
 
-## E1 — Engine Abstraction
+## Epic 13 — Engine Abstraction
 
 **Deliverables**
 
@@ -16,7 +16,7 @@ The objective is not to duplicate the same workload on two platforms. Demonstrat
 
 **Expected outcome:** AERIS can add another execution engine without redesigning the entire platform.
 
-## E2 — Databricks Integration
+## Epic 14 — Databricks Integration
 
 **Deliverables**
 
@@ -26,7 +26,7 @@ The objective is not to duplicate the same workload on two platforms. Demonstrat
 
 **Expected outcome:** AERIS demonstrates genuine multi-engine capability rather than merely documenting it.
 
-## E3 — Interoperability
+## Epic 15 — Interoperability
 
 **Deliverables**
 
@@ -36,7 +36,7 @@ The objective is not to duplicate the same workload on two platforms. Demonstrat
 
 **Expected outcome:** A defensible architecture for cross-engine data consumption.
 
-## E4 — Unified Governance & Observability
+## Epic 16 — Unified Governance & Observability
 
 **Deliverables**
 
@@ -46,7 +46,7 @@ The objective is not to duplicate the same workload on two platforms. Demonstrat
 
 **Expected outcome:** Platform governance and observability remain consistent even when workloads use different engines.
 
-## E5 — Workload Placement
+## Epic 17 — Workload Placement
 
 **Deliverables**
 Create a decision framework covering:
@@ -63,7 +63,7 @@ Use it to justify where selected workloads execute.
 
 **Expected outcome:** Engine selection becomes an engineering decision rather than a technology preference.
 
-## E6 — Architecture Review
+## Epic 18 — Architecture Review
 
 **Deliverables**
 Create ADRs covering:

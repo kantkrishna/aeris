@@ -4,7 +4,10 @@ version = "0.1.0"
 description = "AERIS V1 Platform Foundation"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "fastapi>=0.141.1",
+    "httpx>=0.28.1",
+]
 
 [project.optional-dependencies]
 dev = [
