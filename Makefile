@@ -1,10 +1,15 @@
-.PHONY: venv install lint test setup clean all
+# Makefile
+.PHONY: venv install lint test setup clean all security
 
 venv:
 	uv venv
 
 install: venv
 	uv pip install -e ".[dev]"
+	uv pip install bandit
+
+security:
+	uv run bandit -r src/
 
 lint:
 #	uv run mypy src/foundation/repo_linter.py tests/unit/foundation/test_repo_linter.py --strict
@@ -17,16 +22,17 @@ lint:
 #	uv run mypy infrastructure ingestion transformations
 
 test:
-	uv run pytest tests/ --cov=src.foundation.repo_linter --cov-report=term-missing
+	uv run pytest tests/ --cov=src.production --cov-fail-under=80 --cov-report=term-missing
 
 setup:
-	uv run python scripts/setup_skeleton.py
+	mkdir -p docs/governance docs/operating_model
+	touch docs/governance/access_matrix.md
+	touch docs/operating_model/team_boundaries.md
+	touch docs/operating_model/roadmap.md
+	echo "# Risk Register\n## Risk\n## Impact\n## Mitigation" > docs/operating_model/risk_register.md
 
 clean:
-	rm -rf .venv
-	rm -rf .pytest_cache
-	rm -rf .mypy_cache
-	rm -rf .coverage
+	rm -rf .venv .pytest_cache .mypy_cache .coverage
 	find . -type d -name "__pycache__" -exec rm -rf {} +
 
-all: install lint test setup
+all: install lint security test setup

@@ -11,7 +11,7 @@
 * [Epic 6: AI-Ready Data Product](#epic-6-ai-ready-data-product)
 * [Epic 7: Reliable Data Processing](#epic-7-reliable-data-processing)
 * [Epic 8: SRE & Observability](#epic-8-sre--observability)
-*  [Epic 9: DevSecOps](#epic-9-devsecops)
+* [Epic 9: DevSecOps](#epic-9-devsecops)
 * [Epic 10: Security & Governance](#epic-10-security--governance)
 * [Epic 11: FinOps](#epic-11-finops)
 * [Epic 12: Engineering Operating Model](#epic-12-engineering-operating-model)
